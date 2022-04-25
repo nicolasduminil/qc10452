@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<web-app xmlns:javaee="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="3.0">
+  <javaee:display-name>QC10452 test case</javaee:display-name>
+  <javaee:servlet>
+    <javaee:servlet-name>qc10452</javaee:servlet-name>
+    <javaee:servlet-class>com.grdf.poc.TestWithSoapUI</javaee:servlet-class>
+    <javaee:load-on-startup>100</javaee:load-on-startup>
+  </javaee:servlet>
+  <javaee:servlet-mapping>
+    <javaee:servlet-name>qc10452</javaee:servlet-name>
+    <javaee:url-pattern>/qc10452</javaee:url-pattern>
+  </javaee:servlet-mapping>
+</web-app>

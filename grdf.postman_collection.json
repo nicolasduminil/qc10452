@@ -1,0 +1,54 @@
+{
+	"info": {
+		"_postman_id": "1760b00c-85e5-416b-bfac-ca0ef3cef629",
+		"name": "grdf",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "qc10452",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-type": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "text/xml",
+						"type": "text"
+					},
+					{
+						"key": "SOAPAction",
+						"value": "\"qc10452Unescaped\"",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:poc=\"http://www.poc.grdf.com\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <poc:qc10452Literal>\n         <!--Optional:-->\n         <arg0>&amp;lt;160M3/H</arg0>\n      </poc:qc10452Literal>\n   </soapenv:Body>\n</soapenv:Envelope>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7001/qc10452-ws/TestWithSoapUIService",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7001",
+					"path": [
+						"qc10452-ws",
+						"TestWithSoapUIService"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
