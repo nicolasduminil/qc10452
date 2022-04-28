@@ -5,7 +5,7 @@ import javax.jws.soap.*;
 
 @WebService(name = "Qc10452Srv")
 @SOAPBinding(style=SOAPBinding.Style.DOCUMENT)
-public interface Qc10452Srv extends Iqc10452
+public interface Qc10452Srv
 {
   @WebMethod
   @WebResult(name="literalData")

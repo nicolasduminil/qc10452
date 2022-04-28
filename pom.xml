@@ -7,7 +7,6 @@
   <artifactId>qc10452</artifactId>
   <version>1.0-SNAPSHOT</version>
   <modules>
-    <module>qc10452-api</module>
     <module>qc10452-ws</module>
     <module>qc10452-client</module>
   </modules>
