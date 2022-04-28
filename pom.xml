@@ -9,6 +9,7 @@
   <modules>
     <module>qc10452-ws</module>
     <module>qc10452-client</module>
+    <module>qc10452-test</module>
   </modules>
   <packaging>pom</packaging>
   <name>QC 10452 :: The parent POM</name>

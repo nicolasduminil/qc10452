@@ -14,7 +14,7 @@ import java.io.*;
 import static org.junit.Assert.*;
 
 @RunWith(Arquillian.class)
-public class Qc10452IT
+public class Qc10452ArquillianIT
 {
   @WebServiceRef(type = Qc10452Service.class)
   private Qc10452Service qc10452ws;
@@ -22,7 +22,7 @@ public class Qc10452IT
   @Deployment
   public static WebArchive createDeployment()
   {
-    return ShrinkWrap.createFromZipFile(WebArchive.class, new File("target/qc10452-client.war"));
+    return ShrinkWrap.createFromZipFile(WebArchive.class, new File("target/qc10452-test.war"));
   }
 
   @Test
