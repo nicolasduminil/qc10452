@@ -14,7 +14,7 @@ import static org.mockito.Mockito.*;
 public class TestQC10452WithMocks
 {
   @Mock
-  private Iqc10452 qc10452Mock;
+  private Qc10452Srv qc10452Mock;
   private final ArgumentCaptor<String> param = ArgumentCaptor.forClass(String.class);
 
   @Before

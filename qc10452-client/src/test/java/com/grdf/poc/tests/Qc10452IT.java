@@ -30,6 +30,7 @@ public class Qc10452IT
   {
     assertNotNull(qc10452ws);
   }
+
   @Test
   public void testQc10452LiteralWithArquilian()
   {
