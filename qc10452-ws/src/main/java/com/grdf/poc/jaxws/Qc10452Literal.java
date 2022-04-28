@@ -7,30 +7,30 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 
-@XmlRootElement(name = "qc10452Literal", namespace = "http://www.poc.grdf.com")
+@XmlRootElement(name = "qc10452Literal", namespace = "http://poc.grdf.com/")
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "qc10452Literal", namespace = "http://www.poc.grdf.com")
+@XmlType(name = "qc10452Literal", namespace = "http://poc.grdf.com/")
 public class Qc10452Literal {
 
-    @XmlElement(name = "arg0", namespace = "")
-    private String arg0;
+    @XmlElement(name = "data2literal", namespace = "")
+    private String data2Literal;
 
     /**
      * 
      * @return
      *     returns String
      */
-    public String getArg0() {
-        return this.arg0;
+    public String getData2Literal() {
+        return this.data2Literal;
     }
 
     /**
      * 
-     * @param arg0
-     *     the value for the arg0 property
+     * @param data2Literal
+     *     the value for the data2Literal property
      */
-    public void setArg0(String arg0) {
-        this.arg0 = arg0;
+    public void setData2Literal(String data2Literal) {
+        this.data2Literal = data2Literal;
     }
 
 }

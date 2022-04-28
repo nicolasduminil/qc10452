@@ -6,7 +6,10 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="qc10452-api" />
         <module name="qc10452-ws" />
+        <module name="qc10452-client" />
+        <module name="qc10452-test" />
       </profile>
     </annotationProcessing>
   </component>

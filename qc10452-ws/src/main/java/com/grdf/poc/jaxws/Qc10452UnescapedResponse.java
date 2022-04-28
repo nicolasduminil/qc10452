@@ -7,30 +7,30 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 
-@XmlRootElement(name = "qc10452UnescapedResponse", namespace = "http://www.poc.grdf.com")
+@XmlRootElement(name = "qc10452UnescapedResponse", namespace = "http://poc.grdf.com/")
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "qc10452UnescapedResponse", namespace = "http://www.poc.grdf.com")
+@XmlType(name = "qc10452UnescapedResponse", namespace = "http://poc.grdf.com/")
 public class Qc10452UnescapedResponse {
 
-    @XmlElement(name = "return", namespace = "")
-    private String _return;
+    @XmlElement(name = "unescapedData", namespace = "")
+    private String unescapedData;
 
     /**
      * 
      * @return
      *     returns String
      */
-    public String getReturn() {
-        return this._return;
+    public String getUnescapedData() {
+        return this.unescapedData;
     }
 
     /**
      * 
-     * @param _return
-     *     the value for the _return property
+     * @param unescapedData
+     *     the value for the unescapedData property
      */
-    public void setReturn(String _return) {
-        this._return = _return;
+    public void setUnescapedData(String unescapedData) {
+        this.unescapedData = unescapedData;
     }
 
 }

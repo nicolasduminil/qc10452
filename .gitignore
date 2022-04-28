@@ -1,6 +1,12 @@
 .classpath
 .project
 .settings/
+.idea/*
+*.iws
+/out/
+*.iml
+modules.xml
+*.ipr
 log/
 target/
 target/**

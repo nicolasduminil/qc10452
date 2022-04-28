@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ExternalStorageConfigurationManager" enabled="true" />
   <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/qc10452-client" />
+    <file type="web" url="file://$PROJECT_DIR$/qc10452-test" />
     <file type="web" url="file://$PROJECT_DIR$/qc10452-ws" />
   </component>
   <component name="MavenProjectsManager">

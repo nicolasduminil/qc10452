@@ -125,7 +125,7 @@
    <soapenv:Body>
       <poc:qc10452Literal>
          <!--Optional:-->
-         <arg0>&amp;gt;160M3/h</arg0>
+         <arg0>&lt;160M3/H</arg0>
       </poc:qc10452Literal>
    </soapenv:Body>
 </soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.poc.grdf.com/TestWithSoapUI/qc10452LiteralRequest"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="1b2f646f-4b7c-4ac2-80ab-cbfe5a3f79c4" isOneWay="false" action="" name="qc10452Unescape" bindingOperationName="qc10452Unescape" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="c4830617-ad45-43e7-ab80-79a931098707" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:7001/qc10452-ws/TestWithSoapUIService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:poc="http://www.poc.grdf.com">
@@ -133,7 +133,7 @@
    <soapenv:Body>
       <poc:qc10452Unescape>
          <!--Optional:-->
-         <arg0>&lt;160M3/H</arg0>
+         <arg0>amp;lt;160M3/H</arg0>
       </poc:qc10452Unescape>
    </soapenv:Body>
 </soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.poc.grdf.com/TestWithSoapUI/qc10452UnescapeRequest"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/></con:soapui-project>

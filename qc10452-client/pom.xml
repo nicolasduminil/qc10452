@@ -8,9 +8,9 @@
     <version>1.0-SNAPSHOT</version>
   </parent>
   <modelVersion>4.0.0</modelVersion>
-  <artifactId>qc10452-ws</artifactId>
+  <artifactId>qc10452-client</artifactId>
   <packaging>war</packaging>
-  <name>QC 10452 :: The WAR module</name>
+  <name>QC 10452 :: The client module</name>
   <dependencies>
     <dependency>
       <groupId>javax</groupId>
@@ -18,17 +18,24 @@
       <scope>provided</scope>
     </dependency>
     <dependency>
-      <groupId>org.apache.commons</groupId>
-      <artifactId>commons-text</artifactId>
+      <groupId>org.jboss.arquillian.junit</groupId>
+      <artifactId>arquillian-junit-container</artifactId>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.jboss.arquillian.container</groupId>
+      <artifactId>arquillian-wls-remote-12.1.2</artifactId>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.oracle.weblogic</groupId>
+      <artifactId>weblogic-server-pom</artifactId>
+      <type>pom</type>
+      <scope>provided</scope>
     </dependency>
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
-      <scope>test</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.mockito</groupId>
-      <artifactId>mockito-core</artifactId>
       <scope>test</scope>
     </dependency>
     <dependency>
@@ -42,7 +49,7 @@
       <plugin>
         <groupId>com.oracle.weblogic</groupId>
         <artifactId>weblogic-maven-plugin</artifactId>
-         <configuration>
+        <configuration>
           <adminurl>t3://localhost:7001</adminurl>
           <user>nicolas</user>
           <password>California1</password>
@@ -55,25 +62,30 @@
         <artifactId>jaxws-maven-plugin</artifactId>
         <executions>
           <execution>
-             <phase>process-classes</phase>
+            <phase>generate-sources</phase>
             <goals>
-              <goal>wsgen</goal>
+              <goal>wsimport</goal>
             </goals>
           </execution>
         </executions>
         <configuration>
-          <keep>false</keep>
+          <wsdlFiles>
+            <wsdlFile>${basedir}/../qc10452-ws/src/main/webapp/WEB-INF/wsdl/Qc10452Service.wsdl</wsdlFile>
+          </wsdlFiles>
+          <packageName>com.grdf.poc</packageName>
+          <sourceDestDir>src/main/java</sourceDestDir>
+          <vmArgs>
+            <vmArg>-Djavax.xml.accessExternalSchema=all</vmArg>
+          </vmArgs>
           <extension>true</extension>
-          <genWsdl>true</genWsdl>
-          <inlineSchemas>true</inlineSchemas>
-          <protocol>Xsoap1.2</protocol>
-          <resourceDestDir>${basedir}/src/main/webapp/WEB-INF/wsdl</resourceDestDir>
-          <sourceDestDir>${basedir}/src/main/java</sourceDestDir>
-          <verbose>true</verbose>
-          <sei>com.grdf.poc.Qc10452WS</sei>
+          <keep>true</keep>
           <target>2.1</target>
-          <wsdlLocation>http://localhost:7001/ws/qc10452</wsdlLocation>
+          <wsdlLocation>http://localhost:7001/qc10452-ws/Qc10452Service?WSDL</wsdlLocation>
         </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-failsafe-plugin</artifactId>
       </plugin>
     </plugins>
   </build>

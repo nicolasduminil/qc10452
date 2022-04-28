@@ -7,30 +7,30 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 
-@XmlRootElement(name = "qc10452EscapedResponse", namespace = "http://www.poc.grdf.com")
+@XmlRootElement(name = "qc10452EscapedResponse", namespace = "http://poc.grdf.com/")
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "qc10452EscapedResponse", namespace = "http://www.poc.grdf.com")
+@XmlType(name = "qc10452EscapedResponse", namespace = "http://poc.grdf.com/")
 public class Qc10452EscapedResponse {
 
-    @XmlElement(name = "return", namespace = "")
-    private String _return;
+    @XmlElement(name = "escapedData", namespace = "")
+    private String escapedData;
 
     /**
      * 
      * @return
      *     returns String
      */
-    public String getReturn() {
-        return this._return;
+    public String getEscapedData() {
+        return this.escapedData;
     }
 
     /**
      * 
-     * @param _return
-     *     the value for the _return property
+     * @param escapedData
+     *     the value for the escapedData property
      */
-    public void setReturn(String _return) {
-        this._return = _return;
+    public void setEscapedData(String escapedData) {
+        this.escapedData = escapedData;
     }
 
 }

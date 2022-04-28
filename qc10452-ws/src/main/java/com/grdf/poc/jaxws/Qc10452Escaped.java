@@ -7,30 +7,30 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 
-@XmlRootElement(name = "qc10452Escaped", namespace = "http://www.poc.grdf.com")
+@XmlRootElement(name = "qc10452Escaped", namespace = "http://poc.grdf.com/")
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "qc10452Escaped", namespace = "http://www.poc.grdf.com")
+@XmlType(name = "qc10452Escaped", namespace = "http://poc.grdf.com/")
 public class Qc10452Escaped {
 
-    @XmlElement(name = "arg0", namespace = "")
-    private String arg0;
+    @XmlElement(name = "data2escape", namespace = "")
+    private String data2Escape;
 
     /**
      * 
      * @return
      *     returns String
      */
-    public String getArg0() {
-        return this.arg0;
+    public String getData2Escape() {
+        return this.data2Escape;
     }
 
     /**
      * 
-     * @param arg0
-     *     the value for the arg0 property
+     * @param data2Escape
+     *     the value for the data2Escape property
      */
-    public void setArg0(String arg0) {
-        this.arg0 = arg0;
+    public void setData2Escape(String data2Escape) {
+        this.data2Escape = data2Escape;
     }
 
 }
