@@ -49,6 +49,17 @@
       <scope>test</scope>
     </dependency>
     <dependency>
+      <groupId>org.jboss.shrinkwrap.resolver</groupId>
+      <artifactId>shrinkwrap-resolver-impl-maven</artifactId>
+      <scope>test</scope>
+      <type>jar</type>
+    </dependency>
+    <dependency>
+      <groupId>org.jboss.shrinkwrap.resolver</groupId>
+      <artifactId>shrinkwrap-resolver-impl-maven-archive</artifactId>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
       <groupId>com.grdf.poc</groupId>
       <artifactId>qc10452-client</artifactId>
     </dependency>

@@ -5,6 +5,7 @@ import org.jboss.arquillian.container.test.api.*;
 import org.jboss.arquillian.junit.*;
 import org.jboss.shrinkwrap.api.*;
 import org.jboss.shrinkwrap.api.spec.*;
+import org.jboss.shrinkwrap.resolver.api.maven.*;
 import org.junit.*;
 import org.junit.runner.*;
 
@@ -22,7 +23,7 @@ public class Qc10452ArquillianIT
   @Deployment
   public static WebArchive createDeployment()
   {
-    return ShrinkWrap.createFromZipFile(WebArchive.class, new File("target/qc10452-test.war"));
+    return ShrinkWrap.create(WebArchive.class, "my.war").addAsLibraries(Maven.resolver().resolve("com.grdf.poc:qc10452-client:1.0-SNAPSHOT").withTransitivity().asFile());
   }
 
   @Test
