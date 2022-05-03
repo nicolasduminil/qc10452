@@ -27,30 +27,30 @@ Le tableau ci-dessous résume les résultats des tests:
 
 
 | **Client** | **Opération** | **Entrée**      | **Sortie**       | **Sortie affichée** |
-| ------------ | ---------------- | ------------------ | ------------------ | ---------------------- |
-| Java       | Escape         | \>160M3/H        | \&amp;gt;160M3/H | N/A                  |
-| Java       | Escape         | \&gt;160M3/H     | \&amp;gt;160M3/H | N/A                  |
-| Java       | Escape         | \<160M3/H        | \&lt;160M3/H     | N/A                  |
-| Java       | Escape         | \&lt;160M3/H     | \&amp;lt;160M3/H | N/A                  |
-| Java       | Unescape       | \&gt;160M3/H     | \>160M3/H        | N/A                  |
-| Java       | Unescape       | \&amp;gt;160M3/H | \&gt;160M3/H     | N/A                  |
-| Java       | Unescape       | \&lt;160M3/H     | \<160M3/H        | N/A                  |
-| Java       | Unescape       | \&amp;lt;160M3/H | \&lt;160M3/H     | N/A                  |
-|            |                |                  |                  |                      |
-| SoapUI     | Escape         | \>160M3/H        | \&gt;160M3/H     | \>160M3/H            |
-| SoapUI     | Escape         | \&gt;160M3/H     | \&gt;160M3/H     | \&gt;160M3/H         |
-| SoapUI     | Escape         | \<160M3/H        | Error            | Error                |
-| SoapUI     | Escape         | \&lt;160M3/H     | \&lt;160M3/H     | \&lt;160M3/H         |
-| SoapUI     | Unescape       | \&gt;160M3/H     | \&gt;160M3/H     | \&gt;160M3/H         |
-| SoapUI     | Unescape       | \&amp;gt;160M3/H | \&amp;gt;160M3/H | \&amp;gt;160M3/H     |
-| SoapUI     | Unescape       | \&lt;160M3/H     | \&lt;160M3/H     | \&lt;160M3/H         |
-| SoapUI     | Unescape       | \&amp;lt;160M3/H | \&amp;lt;160M3/H | \&amp;lt;160M3/H     |
-|            |                |                  |                  |                      |
-| Postman    | Escape         | \>160M3/H        | \&gt;160M3/H     | N/A                  |
-| Postman    | Escape         | \&gt;160M3/H     | \&gt;160M3/H     | N/A                  |
-| Postman    | Escape         | \<160M3/H        | Error            | N/A                  |
-| Postman    | Escape         | \&lt;160M3/H     | \&lt;160M3/H     | N/A                  |
-| Postman    | Unescape       | \&gt;160M3/H     | \&gt;160M3/H     | N/A                  |
-| Postman    | Unescape       | \&amp;gt;160M3/H | \&amp;gt;160M3/H | N/A                  |
-| Postman    | Unescape       | \&lt;160M3/H     | \&lt;160M3/H     | N/A                  |
-| Postman    | Unescape       | \&amp;lt;160M3/H | \&amp;lt;160M3/H | N/A                  |
+| -----------| ---------------| -----------------| -----------------| ------------------|
+| Java       | Escape         | \>160M3/H        | \&amp;gt;160M3/H | N/A               |
+| Java       | Escape         | \&gt;160M3/H     | \&amp;gt;160M3/H | N/A               |
+| Java       | Escape         | \<160M3/H        | \&lt;160M3/H     | N/A               |
+| Java       | Escape         | \&lt;160M3/H     | \&amp;lt;160M3/H | N/A               |
+| Java       | Unescape       | \&gt;160M3/H     | \>160M3/H        | N/A               |
+| Java       | Unescape       | \&amp;gt;160M3/H | \&gt;160M3/H     | N/A               |
+| Java       | Unescape       | \&lt;160M3/H     | \<160M3/H        | N/A               |
+| Java       | Unescape       | \&amp;lt;160M3/H | \&lt;160M3/H     | N/A               |
+|            |                |                  |                  |                   |
+| SoapUI     | Escape         | \>160M3/H        | \&gt;160M3/H     | \>160M3/H         |
+| SoapUI     | Escape         | \&gt;160M3/H     | \&gt;160M3/H     | \&gt;160M3/H      |
+| SoapUI     | Escape         | \<160M3/H        | Error            | Error             |
+| SoapUI     | Escape         | \&lt;160M3/H     | \&lt;160M3/H     | \&lt;160M3/H      |
+| SoapUI     | Unescape       | \&gt;160M3/H     | \&gt;160M3/H     | \&gt;160M3/H      |
+| SoapUI     | Unescape       | \&amp;gt;160M3/H | \&amp;gt;160M3/H | \&amp;gt;160M3/H  |
+| SoapUI     | Unescape       | \&lt;160M3/H     | \&lt;160M3/H     | \&lt;160M3/H      |
+| SoapUI     | Unescape       | \&amp;lt;160M3/H | \&amp;lt;160M3/H | \&amp;lt;160M3/H  |
+|            |                |                  |                  |                   |
+| Postman    | Escape         | \>160M3/H        | \&gt;160M3/H     | N/A               |
+| Postman    | Escape         | \&gt;160M3/H     | \&gt;160M3/H     | N/A               |
+| Postman    | Escape         | \<160M3/H        | Error            | N/A               |
+| Postman    | Escape         | \&lt;160M3/H     | \&lt;160M3/H     | N/A               |
+| Postman    | Unescape       | \&gt;160M3/H     | \&gt;160M3/H     | N/A               |
+| Postman    | Unescape       | \&amp;gt;160M3/H | \&amp;gt;160M3/H | N/A               |
+| Postman    | Unescape       | \&lt;160M3/H     | \&lt;160M3/H     | N/A               |
+| Postman    | Unescape       | \&amp;lt;160M3/H | \&amp;lt;160M3/H | N/A               |

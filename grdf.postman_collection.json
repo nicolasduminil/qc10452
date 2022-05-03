@@ -22,13 +22,13 @@
 					},
 					{
 						"key": "SOAPAction",
-						"value": "\"qc10452Unescaped\"",
+						"value": "\"qc10452Literal\"",
 						"type": "text"
 					}
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:poc=\"http://www.poc.grdf.com\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <poc:qc10452Literal>\n         <!--Optional:-->\n         <arg0>&amp;lt;160M3/H</arg0>\n      </poc:qc10452Literal>\n   </soapenv:Body>\n</soapenv:Envelope>",
+					"raw": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:poc=\"http://poc.grdf.com/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <poc:qc10452Literal>\n         <!--Optional:-->\n         <data2literal>>160M3/H</data2literal>\n      </poc:qc10452Literal>\n   </soapenv:Body>\n</soapenv:Envelope>",
 					"options": {
 						"raw": {
 							"language": "xml"
@@ -36,15 +36,18 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:7001/qc10452-ws/TestWithSoapUIService",
+					"raw": "http://127.0.1.1:7001/qc10452-ws/Qc10452Service",
 					"protocol": "http",
 					"host": [
-						"localhost"
+						"127",
+						"0",
+						"1",
+						"1"
 					],
 					"port": "7001",
 					"path": [
 						"qc10452-ws",
-						"TestWithSoapUIService"
+						"Qc10452Service"
 					]
 				}
 			},
