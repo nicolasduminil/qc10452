@@ -7,14 +7,11 @@ import org.jboss.arquillian.test.api.*;
 import org.jboss.shrinkwrap.api.*;
 import org.jboss.shrinkwrap.api.spec.*;
 import org.jboss.shrinkwrap.resolver.api.maven.*;
-import org.jboss.shrinkwrap.resolver.api.maven.archive.importer.*;
 import org.junit.*;
 import org.junit.runner.*;
 
 import javax.xml.namespace.*;
 import javax.xml.ws.*;
-
-import java.io.*;
 import java.net.*;
 
 import static org.junit.Assert.*;
@@ -46,5 +43,23 @@ public class Qc10452ArqIT
   public void test123()
   {
     assertEquals("&gt;160M3/H", service.getPort(Qc10452Srv.class).qc10452Escaped(">160M3/H"));
+  }
+
+  @Test
+  public void testQc10452EscapeWithArquilian()
+  {
+    assertEquals("&gt;160M3/H", service.getPort(Qc10452Srv.class).qc10452Escaped(">160M3/H"));
+    assertEquals("&amp;gt;160M3/H", service.getPort(Qc10452Srv.class).qc10452Escaped("&gt;160M3/H"));
+    assertEquals("&lt;160M3/H", service.getPort(Qc10452Srv.class).qc10452Escaped("<160M3/H"));
+    assertEquals("&amp;lt;160M3/H", service.getPort(Qc10452Srv.class).qc10452Escaped("&lt;160M3/H"));
+  }
+
+  @Test
+  public void testQc10452UnescapeWithArquilian()
+  {
+    assertEquals(">160M3/H", service.getPort(Qc10452Srv.class).qc10452Unescaped("&gt;160M3/H"));
+    assertEquals("&gt;160M3/H", service.getPort(Qc10452Srv.class).qc10452Unescaped("&amp;gt;160M3/H"));
+    assertEquals("<160M3/H", service.getPort(Qc10452Srv.class).qc10452Unescaped("&lt;160M3/H"));
+    assertEquals("&lt;160M3/H", service.getPort(Qc10452Srv.class).qc10452Unescaped("&amp;lt;160M3/H"));
   }
 }
