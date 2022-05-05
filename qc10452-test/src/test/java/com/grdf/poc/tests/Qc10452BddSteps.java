@@ -7,7 +7,7 @@ import static org.junit.Assert.*;
 
 public class Qc10452BddSteps
 {
-  private Qc10452Srv srv;
+  private Qc10452Srv srv = new Qc10452Service().getQc10452Port();
   private String response;
 
   @Given("web service proxy is instantiated")
